@@ -1,0 +1,22 @@
+.category-head{
+    margin-top: 30px;
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+}
+.category-title{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 10px;
+}
+.category-card{
+    width: 250px;
+    height: 300px;
+    margin-left: 100px;
+    margin-top: 40px;
+}
+.category-img{
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+
+}
