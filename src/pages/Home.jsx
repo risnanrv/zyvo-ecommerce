@@ -2,6 +2,7 @@ import React from 'react'
 import NavbarSection from '../components/Navbar/Navbar'
 import CaroseulHero from '../components/Carousel/CarouselHero'
 import CategorySection from '../components/CategorySection/CategorySection'
+import NewCollections from '../components/NewCollections/NewCollections'
 
 function Home() {
   return (
@@ -9,6 +10,7 @@ function Home() {
       <NavbarSection/>
       <CaroseulHero/>
       <CategorySection/>
+      <NewCollections/>
     </div>
   )
 }

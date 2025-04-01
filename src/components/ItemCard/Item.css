@@ -1,0 +1,31 @@
+.item{
+    width: 350px;
+    display: flex;
+    margin-bottom: 20px;
+
+}
+.item p {
+    margin: 4px 0;
+    font-size: 18px;
+}
+.item-prices{
+    display: flex;
+    gap: 25px;
+}
+.item-new-price{
+    color: green;
+    font-size: 15px;
+    font-weight: 600;
+}
+.item-old-price{
+    color: red;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+.item-img{
+    width: 250px;                
+    height: 300px; 
+    object-fit: cover; 
+   
+}

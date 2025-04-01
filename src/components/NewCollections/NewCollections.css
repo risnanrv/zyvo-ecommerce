@@ -1,0 +1,9 @@
+.new-collection-head {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+}
+.new-collection-items{
+    display: flex;
+}
