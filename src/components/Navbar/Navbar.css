@@ -2,7 +2,6 @@
     height: 50px;
     width: auto ;
     margin-left: 25px;
-
 }
 
 .nav-link{
@@ -10,6 +9,7 @@
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
+    color: black;
     transition: 0.3s;
 }
 .nav-links{
@@ -23,12 +23,31 @@
     font-size: 1.2rem;
 
 }
+.navbar-section {
+  height: 95px;
+  display: flex !important;  /* Ensure it uses flex */
+  align-items: center !important;  /* Vertically center items */
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;  /* Adds spacing between links */
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 @media screen and (min-width: 992px) {
     .nav-icons{
         margin-right: 35px;
     }
     .navbar-section{
       margin-top: -20px;
+      height: 95px;
     }
     
 }
@@ -90,6 +109,34 @@
   width: 100%;
   height: 3px;
   border-radius: 10px;
-  background-color: blue;
+  background-color: black;
   margin-top: -3px;
+}
+.login-nav{
+  width: 100px;
+  height: 40px;
+  border: 1px solid black;
+  outline: none;
+  border-radius: 120px;
+  background-color: white;
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 5px;
+}
+.cart-nav{
+  width: 50px;
+  height: 40px;
+  border: 1px solid black;
+  outline: none;
+  border-radius: 120px;
+  background-color: white;
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 5px;
 }

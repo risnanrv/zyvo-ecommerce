@@ -1,0 +1,77 @@
+.signup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signup-container{
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 5px 5px 30px;
+    height: 500px;
+    width: 500px;
+    margin-top: 50px;
+}
+.signup-container h1{
+    text-align: center;
+    margin: 30px ;
+    font-weight: bold;
+}
+.signup-fields{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+   
+}
+.signup-fields input{
+    height: 40px;
+    border: none;
+    border-bottom: 3px solid black;
+    width: 400px;
+}
+.checkbox-section{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+.checkbox-section p{
+    font-size: 14px;
+    margin: 5px;
+}
+.signup-btn-container{
+    display: flex;
+    justify-content: center;
+}
+.signup-btn{
+    width: 300px;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 120px;
+    background-color: black;
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px ;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.signup-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: rgb(30, 30, 30);
+}
+.login-text{
+    font-size: 15px;
+    text-align: center;
+}
+.login-text span{
+    font-weight: 800;
+    font-size: 16px;
+
+}
+.login-text span:hover{
+    text-decoration: underline;
+}

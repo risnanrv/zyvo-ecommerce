@@ -3,20 +3,21 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
-import { FaCircleUser } from "react-icons/fa6";  // Correct import for FaCircleUser
+import { FaCircleUser } from "react-icons/fa6";
 import './Navbar.css';
 import { useState } from 'react';
 import { X, List } from "lucide-react";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 function NavbarSection() {
   const [isOpen, setIsOpen] = useState(false);
-  const [menu , setMenu] = useState("home")
+  const navigate = useNavigate();
+  const location = useLocation();
 
   return (
     <>
       {/* Main Navbar */}
-      <Navbar expand="lg" className="bg-body-tertiary  navbar-section" data-bs-theme="">
+      <Navbar expand="lg" className="bg-body-tertiary navbar-section d-flex align-items-center" data-bs-theme="">
         <Container>
           <Navbar.Brand className='nav-logo' href="#home">
             <img className="logo-img" src={Logo} alt="Logo" />
@@ -30,15 +31,30 @@ function NavbarSection() {
           {/* Normal Navbar for Large Screens */}
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mx-auto nav-links">
-              <Nav.Link  onClick={()=> {setMenu("home")}} ><Link className='nav-link' to= '/'>Home</Link>   {menu === "home" ? <hr/> : <> </>}</Nav.Link>
-              <Nav.Link  onClick={()=> {setMenu("shop")}} ><Link className='nav-link' to= '/shop'>Shop</Link> {menu === "shop" ? <hr/> : <> </>}</Nav.Link>
-              <Nav.Link   onClick={()=> {setMenu("about")}} ><Link className='nav-link' to= '/about'>About</Link> {menu === "about" ? <hr/> : <> </>}</Nav.Link>
-              <Nav.Link  onClick={()=> {setMenu("contact")}} ><Link className='nav-link' to= '/contact'>Contact</Link> {menu === "contact" ? <hr/> : <> </>}</Nav.Link>
+              <Nav.Link>
+                <Link className="nav-link" to="/">Home</Link>
+                {location.pathname === "/" && <hr />}
+              </Nav.Link>
+              <Nav.Link>
+                <Link className="nav-link" to="/shop">Shop</Link>
+                {location.pathname === "/shop" && <hr />}
+              </Nav.Link>
+              <Nav.Link>
+                <Link className="nav-link" to="/about">About</Link>
+                {location.pathname === "/about" && <hr />}
+              </Nav.Link>
+              <Nav.Link>
+                <Link className="nav-link" to="/contact">Contact</Link>
+                {location.pathname === "/contact" && <hr />}
+              </Nav.Link>
             </Nav>
             <Nav className="nav-icons">
-              <Nav.Link ><FaSearch /></Nav.Link>
-              <Nav.Link><FaCircleUser /></Nav.Link>
-              <Nav.Link><FaShoppingCart /></Nav.Link>
+              <Nav.Link>
+                <button onClick={() => navigate('/login')} className='login-nav'><FaCircleUser /> Login</button>
+              </Nav.Link>
+              <Nav.Link>
+                <button className="cart-nav"><FaShoppingCart /></button>
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -51,15 +67,18 @@ function NavbarSection() {
             <X size={32} />
           </button>
           <Nav className="overlay-nav-links">
-            <Nav.Link onClick={() => setIsOpen(false)}><Link className='nav-link' to= '/'/>Home</Nav.Link>
-            <Nav.Link onClick={() => setIsOpen(false)}><Link className='nav-link' to= '/shop'/>Shop</Nav.Link>
-            <Nav.Link onClick={() => setIsOpen(false)}><Link className='nav-link' to= '/about'/>About</Nav.Link>
-            <Nav.Link onClick={() => setIsOpen(false)}><Link className='nav-link' to= '/contact'/>Contact</Nav.Link>
+            <Nav.Link href='/' onClick={() => setIsOpen(false)}><Link className='nav-link' to= '/'/>Home</Nav.Link>
+            <Nav.Link href='/shop' onClick={() => setIsOpen(false)}><Link className='nav-link' to= '/shop'/>Shop</Nav.Link>
+            <Nav.Link href='/about' onClick={() => setIsOpen(false)}><Link className='nav-link' to= '/about'/>About</Nav.Link>
+            <Nav.Link href='/contact' onClick={() => setIsOpen(false)}><Link className='nav-link' to= '/contact'/>Contact</Nav.Link>
           </Nav>
           <Nav className="overlay-nav-icons">
-            <Nav.Link href="#home"><FaSearch /></Nav.Link>
-            <Nav.Link href="#link"><FaCircleUser /></Nav.Link>
-            <Nav.Link href="#home"><FaShoppingCart /></Nav.Link>
+          <Nav.Link>
+                <button onClick={() => navigate('/login')} className='login-nav'><FaCircleUser /> Login</button>
+              </Nav.Link>
+              <Nav.Link>
+                <button className="cart-nav"><FaShoppingCart /></button>
+              </Nav.Link>
           </Nav>
         </div>
       )}
@@ -68,3 +87,5 @@ function NavbarSection() {
 }
 
 export default NavbarSection;
+
+
