@@ -16,7 +16,7 @@ function NavbarSection() {
   return (
     <>
       {/* Main Navbar */}
-      <Navbar expand="lg" className="bg-body-tertiary fixed-top navbar-section" data-bs-theme="">
+      <Navbar expand="lg" className="bg-body-tertiary  navbar-section" data-bs-theme="">
         <Container>
           <Navbar.Brand className='nav-logo' href="#home">
             <img className="logo-img" src={Logo} alt="Logo" />
@@ -51,10 +51,10 @@ function NavbarSection() {
             <X size={32} />
           </button>
           <Nav className="overlay-nav-links">
-            <Nav.Link href="#home" onClick={() => setIsOpen(false)}>Home</Nav.Link>
-            <Nav.Link href="#link" onClick={() => setIsOpen(false)}>Shop</Nav.Link>
-            <Nav.Link href="#home" onClick={() => setIsOpen(false)}>About</Nav.Link>
-            <Nav.Link href="#link" onClick={() => setIsOpen(false)}>Contact</Nav.Link>
+            <Nav.Link onClick={() => setIsOpen(false)}><Link className='nav-link' to= '/'/>Home</Nav.Link>
+            <Nav.Link onClick={() => setIsOpen(false)}><Link className='nav-link' to= '/shop'/>Shop</Nav.Link>
+            <Nav.Link onClick={() => setIsOpen(false)}><Link className='nav-link' to= '/about'/>About</Nav.Link>
+            <Nav.Link onClick={() => setIsOpen(false)}><Link className='nav-link' to= '/contact'/>Contact</Nav.Link>
           </Nav>
           <Nav className="overlay-nav-icons">
             <Nav.Link href="#home"><FaSearch /></Nav.Link>

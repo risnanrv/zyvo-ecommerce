@@ -29,3 +29,11 @@
     object-fit: cover; 
    
 }
+@media screen and (max-width:991px) {
+    .item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+}

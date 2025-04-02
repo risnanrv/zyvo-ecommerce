@@ -1,0 +1,49 @@
+.bar-container {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px; /* Optional for rounded corners */
+    gap: 20px; /* Space between buttons */
+}
+
+.shop-btn {
+    background-color: white;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Optional */
+  
+}
+
+.shop-btn:click {
+    background-color: red; /* Light gray hover effect */
+}
+
+.clicked-btn{
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+@media screen and (max-width: 992px) {
+    .bar-container{
+        gap: 10px;
+        padding: 7px;
+    }
+    .shop-btn {
+        font-size: 1rem;
+    }
+}
+.products-section{
+    display: flex;
+}
