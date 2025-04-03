@@ -145,29 +145,41 @@
   transition: all 0.3s ease-in-out;
   margin-top: 5px;
 }
-.cart-quantity{
-  width: 16px;
-    height: 15px;
+.cart-container {
+    position: relative;
+    display: inline-block; /* Ensures the container fits the cart icon */
+}
+
+
+.cart-quantity {
+  position: absolute;
+    top: 26px;
+    right: 21px;
+    transform: translate(50%, -50%);
+    width: 16px;
+    height: 16px;
     background-color: red;
     color: white;
-    font-size: 11px;
+    font-size: 12px;
     text-align: center;
+    line-height: 18px;
     border-radius: 50%;
-    position: absolute;
-    z-index: 100;
-    top: 35px;
-    right: 164px;
+    font-weight: bold;
 }
+
+
 .cart-quantity-overlay{
-  width: 16px;
-  height: 15px;
+  position: absolute;
+  top: 25px;
+    right: 29px;
+  transform: translate(50%, -50%); /* Moves the badge to the top-right */
+  width: 18px;
+  height: 18px;
   background-color: red;
   color: white;
-  font-size: 11px;
+  font-size: 12px;
   text-align: center;
+  line-height: 18px;
   border-radius: 50%;
-  position: absolute;
-  z-index: 100;
-  right: 147px;
-  bottom: 160px;
+  font-weight: bold;
 }

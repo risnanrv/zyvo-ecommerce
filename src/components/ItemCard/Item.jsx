@@ -32,12 +32,12 @@ function Item(props) {
           }}>
             <FaHeart />
           </button>
-          <button className="action-btn cart-btn" onClick={(e) => {
+          {/* <button className="action-btn cart-btn" onClick={(e) => {
             e.stopPropagation()
             
           }}>
             <FaShoppingCart />
-          </button>
+          </button> */}
         </div>
       </div>
       

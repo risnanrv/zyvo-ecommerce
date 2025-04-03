@@ -140,7 +140,7 @@
     }
     
     .category-card {
-      max-width: 240px;
+      max-width: 200px;
     }
   }
   
@@ -164,6 +164,18 @@
     .category-title {
       font-size: 1.3rem;
     }
+    .category-card {
+        width: 100%;
+        max-width: 280px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        cursor: pointer;
+        background: white;
+        position: relative;
+      }
+      
   }
   
   @media (max-width: 575px) {

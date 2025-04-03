@@ -55,10 +55,10 @@ function NavbarSection() {
               <Nav.Link>
                 <button onClick={() => navigate('/login')} className='login-nav'><FaCircleUser /> Login</button>
               </Nav.Link>
-              <Nav.Link>
-                <button onClick={() => navigate('/cart')} className="cart-nav"><FaShoppingCart /></button>
+              <Nav.Link className='cart-container'>
+                <button  onClick={() => navigate('/cart')} className="cart-nav"><FaShoppingCart /></button>
                 <div className="cart-quantity"> {getTotalCartItems()}</div>
-
+                
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
@@ -81,7 +81,7 @@ function NavbarSection() {
           <Nav.Link>
                 <button onClick={() => navigate('/login')} className='login-nav'><FaCircleUser /> Login</button>
               </Nav.Link>
-              <Nav.Link>
+              <Nav.Link className='cart-container'>
                 <button  onClick={() => navigate('/cart')} className="cart-nav"><FaShoppingCart /></button>
                 <div className="cart-quantity-overlay"> {getTotalCartItems()}</div>
                 
