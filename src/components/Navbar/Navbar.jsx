@@ -72,10 +72,10 @@ function NavbarSection() {
             <X size={32} />
           </button>
           <Nav className="overlay-nav-links">
-            <Nav.Link href='/' onClick={() => { setIsOpen(false); navigate('/'); }  }><Link className='nav-link' to= '/'/>Home</Nav.Link>
-            <Nav.Link href='/shop'  onClick={() => { setIsOpen(false); navigate('/shop'); }}><Link className='nav-link' to= '/shop'/>Shop</Nav.Link>
-            <Nav.Link href='/about'  onClick={() => { setIsOpen(false); navigate('/about'); }}><Link className='nav-link' to= '/about'/>About</Nav.Link>
-            <Nav.Link href='/contact'  onClick={() => { setIsOpen(false); navigate('/contact'); }}><Link className='nav-link' to= '/contact'/>Contact</Nav.Link>
+            <Nav.Link className='nav-link'  onClick={() => { setIsOpen(false); navigate('/'); }  }>Home</Nav.Link>
+            <Nav.Link className='nav-link'  onClick={() => { setIsOpen(false); navigate('/shop'); }}>Shop</Nav.Link>
+            <Nav.Link className='nav-link'  onClick={() => { setIsOpen(false); navigate('/about'); }}>About</Nav.Link>
+            <Nav.Link className='nav-link'   onClick={() => { setIsOpen(false); navigate('/contact'); }}>Contact</Nav.Link>
           </Nav>
           <Nav className="overlay-nav-icons">
           <Nav.Link>
