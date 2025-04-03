@@ -27,8 +27,8 @@ function NewCollections() {
       
      
   return (
-    <Container>
-    <div className='new-collections'>
+    <Container className='new-collections'>
+    <div >
        <h2 className="new-collection-head">New Collections</h2>
         <Row className='justify-content-center new-collection-item'>
         {

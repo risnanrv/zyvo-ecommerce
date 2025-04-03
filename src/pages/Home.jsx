@@ -4,6 +4,7 @@ import CaroseulHero from '../components/Carousel/CarouselHero'
 import CategorySection from '../components/CategorySection/CategorySection'
 import NewCollections from '../components/NewCollections/NewCollections'
 import FooterSection from '../components/Footer/Footer'
+import Partners from '../components/Partners/Partners'
 
 function Home() {
   return (
@@ -12,6 +13,7 @@ function Home() {
       <CaroseulHero/>
       <CategorySection/>
       <NewCollections/>
+      <Partners/>
       <FooterSection/>
     </div>
   )

@@ -4,3 +4,7 @@
     object-fit: cover;
     transition: transform 0.5s ease-in-out;
 }
+body{
+    background-color: #f8f9fa;
+
+}

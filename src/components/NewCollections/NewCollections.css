@@ -3,7 +3,12 @@
     font-weight: bold;
     margin: 20px 0;
     text-align: center;
+    margin-bottom: 40px;
 }
 .new-collection-items{
     display: flex;
+}
+.new-collections{
+    background-color: #f8f9fa;
+   
 }

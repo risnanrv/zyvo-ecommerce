@@ -8,15 +8,15 @@ function CartItems() {
     const [promoCode, setPromoCode] = useState('');
     const [discount, setDiscount] = useState(0);
 
-    // Calculate subtotal
+    
     const subtotal = products.reduce((total, item) => {
         return total + (cartItems[item.id] > 0 ? item.newPrice * cartItems[item.id] : 0);
     }, 0);
 
-    // Handle promo code application
+   
     const applyPromoCode = () => {
         if (promoCode === "SAVE10") {
-            setDiscount(subtotal * 0.1); // 10% discount
+            setDiscount(subtotal * 0.1);
         } else {
             setDiscount(0);
             alert("Invalid promo code");
@@ -50,7 +50,6 @@ function CartItems() {
                 )
             ))}
 
-            {/* Cart Summary Section */}
             <div className="cart-summary">
                 <div className="promo-code">
                     <input

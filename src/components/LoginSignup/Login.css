@@ -2,6 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #f8f9fa;
+
 }
 
 .login-container {
@@ -49,7 +51,10 @@
     display: flex;
     justify-content: center;
 }
-
+input:focus {
+    outline: none;
+   }
+   
 .login-btn {
     width: 300px;
     height: 45px;

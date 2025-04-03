@@ -2,6 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #f8f9fa;
+
 }
 .signup-container{
     background-color: white;
@@ -29,7 +31,12 @@
     border: none;
     border-bottom: 3px solid black;
     width: 400px;
+    outline: none;
 }
+input:focus {
+   outline: none;
+  }
+  
 .checkbox-section{
     display: flex;
     justify-content: center;

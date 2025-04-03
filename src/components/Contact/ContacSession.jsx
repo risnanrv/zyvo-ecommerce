@@ -27,16 +27,9 @@ const ContactPage = () => {
 
   return (
     <div className="contact-page">
-      {/* Hero Section */}
-      <section className="hero-section position-relative">
-        <div className="hero-overlay position-absolute w-100 h-100"></div>
-        <div className="container position-relative z-index-1 h-100 d-flex align-items-center">
-          <div className="text-center text-white w-100">
-            <h1 className="display-4 fw-bold mb-3">CONNECT WITH ZYVO</h1>
-            <p className="lead">We're here to elevate your experience</p>
-          </div>
-        </div>
-      </section>
+
+<h1 className="contact-head">CONNECT WITH ZYVO</h1>
+<p className="lead">We're here to elevate your experience</p>
 
       {/* Contact Grid */}
       <section className="py-5 py-lg-6">

@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import { ShopContext } from '../../Context/ShopContext';
 
 const ProductDetails = ({ product }) => {
-  const [selectedSize, setSelectedSize] = useState('');
+  const [selectedSize, setSelectedSize] = useState('7');
   const [quantity, setQuantity] = useState(1);
   const [isWishlisted, setIsWishlisted] = useState(false);
   const { id } = useParams();
