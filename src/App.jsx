@@ -8,11 +8,14 @@ import Contact from './pages/Contact';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Product from './pages/Product';
+import ShopContextProvider from './Context/ShopContext';
+import CartItems from './components/CartItems/CartItems';
 function App() {
   
 
   return (
     <div>
+      <ShopContextProvider>
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/shop' element={<Shop/>} />
@@ -21,11 +24,12 @@ function App() {
         <Route path='/signup' element={<Signup/>} />
         <Route path='/login' element={<Login/>} />
         <Route path='/product/:id' element={<Product/>} />
+        <Route path='/cart' element={<CartItems/>} />
         
       </Routes>
 
-      
-    </div>
+      </ShopContextProvider>
+          </div>
   )
 }
 

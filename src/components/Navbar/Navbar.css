@@ -140,3 +140,16 @@
   transition: all 0.3s ease-in-out;
   margin-top: 5px;
 }
+.cart-quantity{
+  width: 16px;
+    height: 15px;
+    background-color: red;
+    color: white;
+    font-size: 11px;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 100;
+    top: 35px;
+    right: 164px;
+}

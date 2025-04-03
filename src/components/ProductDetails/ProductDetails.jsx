@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './ProductDetails.css';
 import products from '../../assets/assets';
 import { useParams } from 'react-router-dom';
+import { ShopContext } from '../../Context/ShopContext';
 
 const ProductDetails = ({ product }) => {
   const [selectedSize, setSelectedSize] = useState('');
@@ -9,6 +10,9 @@ const ProductDetails = ({ product }) => {
   const [isWishlisted, setIsWishlisted] = useState(false);
   const { id } = useParams();
   const item = products.find((item) => item.id === parseInt(id));
+
+  const {addToCart} = useContext(ShopContext) 
+
   // Sample product data with single image
   const sampleProduct = {
     id: 1,
@@ -37,15 +41,8 @@ const ProductDetails = ({ product }) => {
     }
   };
 
-  const handleAddToCart = () => {
-    if (!selectedSize) {
-      alert('Please select a size');
-      return;
-    }
-    // Add to cart logic would go here
-    alert(`Added ${quantity} ${item.name} (${selectedSize}) to cart`);
-  };
 
+  
   return (
     <div className="product-details-container">
       <div className="product-image">
@@ -123,7 +120,7 @@ const ProductDetails = ({ product }) => {
         </div>
 
         <div className="product-actions">
-          <button className="add-to-cart" onClick={handleAddToCart}>
+          <button className="add-to-cart" onClick={() => addToCart(item.id)}>
             Add to Cart
           </button>
           <button 

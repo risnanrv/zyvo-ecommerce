@@ -5,15 +5,18 @@ import Navbar from 'react-bootstrap/Navbar';
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
 import { FaCircleUser } from "react-icons/fa6";
 import './Navbar.css';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { X, List } from "lucide-react";
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { ShopContext } from '../../Context/ShopContext';
 
 function NavbarSection() {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
-  const location = useLocation();
-
+  // const location = useLocation();
+  // const {getTotalCartItems} = useContext(ShopContext)
+ 
+  
   return (
     <>
       {/* Main Navbar */}
@@ -53,7 +56,9 @@ function NavbarSection() {
                 <button onClick={() => navigate('/login')} className='login-nav'><FaCircleUser /> Login</button>
               </Nav.Link>
               <Nav.Link>
-                <button className="cart-nav"><FaShoppingCart /></button>
+                <button onClick={() => navigate('/cart')} className="cart-nav"><FaShoppingCart /></button>
+                <div className="cart-quantity">0</div>
+
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
@@ -77,7 +82,8 @@ function NavbarSection() {
                 <button onClick={() => navigate('/login')} className='login-nav'><FaCircleUser /> Login</button>
               </Nav.Link>
               <Nav.Link>
-                <button className="cart-nav"><FaShoppingCart /></button>
+                <button  onClick={() => navigate('/cart')} className="cart-nav"><FaShoppingCart /></button>
+                
               </Nav.Link>
           </Nav>
         </div>
