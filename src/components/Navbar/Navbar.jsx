@@ -13,8 +13,8 @@ import { ShopContext } from '../../Context/ShopContext';
 function NavbarSection() {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
-  // const location = useLocation();
-  // const {getTotalCartItems} = useContext(ShopContext)
+   const location = useLocation();
+   const {getTotalCartItems} = useContext(ShopContext)
  
   
   return (
@@ -57,7 +57,7 @@ function NavbarSection() {
               </Nav.Link>
               <Nav.Link>
                 <button onClick={() => navigate('/cart')} className="cart-nav"><FaShoppingCart /></button>
-                <div className="cart-quantity">0</div>
+                <div className="cart-quantity"> {getTotalCartItems()}</div>
 
               </Nav.Link>
             </Nav>
