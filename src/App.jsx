@@ -9,7 +9,7 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Product from './pages/Product';
 import ShopContextProvider from './Context/ShopContext';
-import CartItems from './components/CartItems/CartItems';
+import Cart from './pages/Cart';
 function App() {
   
 
@@ -24,7 +24,7 @@ function App() {
         <Route path='/signup' element={<Signup/>} />
         <Route path='/login' element={<Login/>} />
         <Route path='/product/:id' element={<Product/>} />
-        <Route path='/cart' element={<CartItems/>} />
+        <Route path='/cart' element={<Cart/>} />
         
       </Routes>
 
